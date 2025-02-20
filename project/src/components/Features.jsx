@@ -2,7 +2,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const FeatureCard = () => (
-  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
       <FaSearch className="text-primary text-xl algin-center" />
     </div>
@@ -16,16 +16,24 @@ const Features = () => {
     <div className="py-20">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">
-          Effortless Healthcare at<br />Your Fingertips
+          Effortless  at<br />Your Fingertips
         </h2>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-[0px_4px_3.5999999046325684px_0px_rgba(0,0,0,0.19)]"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+        
+      {/* <div class="w-[221px] h-[246px] bg-white rounded-[29px] shadow-[0px_4px_3.5999999046325684px_0px_rgba(0,0,0,0.19)]"></div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <FeatureCard />
           <FeatureCard />
           <FeatureCard />
           <FeatureCard />
         </div>
+        <img src="/src/assets/child-cheerful-laughing-parent.png" alt="Laptop" className=" align-center mb-[-6.7%] w-[80%] h-auto" />
       </div>
     </div>
   );

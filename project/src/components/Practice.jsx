@@ -22,7 +22,7 @@ const Practice = () => {
             </div>
           </div>
           <div className="relative">
-            <img src="https://placehold.co/500x600?text=Doctor" alt="Doctor" className="w-full rounded-lg shadow-xl" />
+            <img src="/src/assets/young-doctor-getting-ready-work.png" alt="Laptop" className="mb-[-17%] w-200 h-auto" />
           </div>
         </div>
       </div>

@@ -17,9 +17,9 @@ const Hero = () => {
             <button className="bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary">
               Get App →
             </button>
-            <p className="text-darkblue text-[16px] mb-8 ">
+            <p className="text-darkblue text-[16px] mb-3 mt-">
             Need to register as a Doctor?</p>
-            <button className="ml-4 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-primary hover:text-white">
+            <button className="  bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-primary hover:text-white">
               Join as Doctor
             </button>
           </div>
