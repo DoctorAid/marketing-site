@@ -20,7 +20,7 @@ const Features = () => {
         </h2>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="w-[221px] h-[246px] relative">
-    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-[0px_4px_3.5999999046325684px_0px_rgba(0,0,0,0.19)]"></div>
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
     <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
     <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
     <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
