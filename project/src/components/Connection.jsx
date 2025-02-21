@@ -11,7 +11,7 @@ const Connection = () => {
               Doctors Together
             </h2>
             <p className="text-blue-100 mb-8">
-              Whether you're a patient booking appointments or a doctor managing your schedule, everything you need is just a tap away.
+              Whether you are a patient booking appointments or a doctor managing your schedule, everything you need is just a tap away.
             </p>
             <button className="bg-white text-primary px-6 py-3 rounded-md hover:bg-blue-50">
               Download Now →
