@@ -18,7 +18,7 @@ const Connection = () => {
             </button>
           </div>
           <div className="relative">
-            <img src="https://placehold.co/300x600?text=Mobile+App" alt="Mobile app" className="w-full rounded-lg shadow-xl" />
+            <img src="/src/assets/docphone.png" alt="Mobile app" className="w-full" />
           </div>
         </div>
       </div>

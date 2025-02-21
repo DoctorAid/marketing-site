@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
 
 const FeatureCard = () => (
   <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -19,23 +18,41 @@ const Features = () => {
           Effortless  at<br />Your Fingertips
         </h2>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="w-[221px] h-[246px] relative">
+      <div className="flex flex-cols-1 justify-center md:grid-cols-1 lg:grid-cols-4 gap-12 ">
+      <div className="flex flex-col max-w-7xl items-center justify-center ">
+      <div class="w-[221px] h-[246px] relative">
+      <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+      <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+      <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+      <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
+<div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
     <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
     <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
     <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
     <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
 </div>
-        
-      {/* <div class="w-[221px] h-[246px] bg-white rounded-[29px] shadow-[0px_4px_3.5999999046325684px_0px_rgba(0,0,0,0.19)]"></div> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <FeatureCard />
-          <FeatureCard />
-          <FeatureCard />
-          <FeatureCard />
+</div>
+<div className="flex flex-col max-w-7xl items-center justify-center  "><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
+<div className="flex flex-col max-w-7xl items-center justify-center"><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
         </div>
-        <img src="/src/assets/child-cheerful-laughing-parent.png" alt="Laptop" className=" align-center mb-[-6.7%] w-[80%] h-auto" />
+        <div className="flex items-center justify-center">
+        <img src="/src/assets/child-cheerful-laughing-parent.png" alt="Laptop" className="  mb-[-4.85%] w-[50%] h-auto" />
+        </div>
       </div>
-    </div>
   );
 };
 

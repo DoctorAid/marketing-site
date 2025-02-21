@@ -18,7 +18,7 @@ const Management = () => {
             </button>
           </div>
           <div className="relative">
-            <img src="your-laptop-image.png" alt="Laptop" className="w-full rounded-lg shadow-xl" />
+            <img src="/src/assets/lap.png" alt="Laptop" className="w-full" />
           </div>
         </div>
       </div>

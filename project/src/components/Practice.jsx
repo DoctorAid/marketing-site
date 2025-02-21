@@ -11,18 +11,40 @@ const Practice = () => {
               Your Practice,<br />
               Your Way!
             </h2>
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              {[1, 2, 3, 4].map((item) => (
-                <div key={item} className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                  <FaSearch className="text-primary text-xl mb-2" />
-                  <h3 className="font-semibold">Find a Doctor</h3>
-                  <p className="text-sm text-gray-600">Search for trusted GPs near you</p>
-                </div>
-              ))}
-            </div>
+            <div className="flex flex-cols-1 justify-center md:grid-cols-1 lg:grid-cols-4 gap-12 ">
+
+            <div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
+<div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
+<div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
+</div>
+<div className="max-w-7xl items-left justify-left "><div class="w-[221px] h-[246px] relative">
+    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
+    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
+    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
+    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
+</div>
+</div>
           </div>
           <div className="relative">
-            <img src="/src/assets/young-doctor-getting-ready-work.png" alt="Laptop" className="mb-[-17%] w-200 h-auto" />
+            <img src="/src/assets/young-doctor-getting-ready-work.png" alt="Laptop" className=" w-[150%] h-auto" />
           </div>
         </div>
       </div>
