@@ -11,7 +11,7 @@ const Management = () => {
               Practice with Ease
             </h2>
             <p className="text-blue-100 mb-8">
-              DoctorAid helps GPs focus on their patients by providing a smart, efficient way to manage appointments, prescriptions, and practice—all in one place.
+              DoctorMed helps GPs focus on their patients by providing a smart, efficient way to manage appointments, send reminders, and practice admin in one place.
             </p>
             <button className="bg-white text-primary px-6 py-3 rounded-md hover:bg-blue-50">
               Join as a Doctor &gt;

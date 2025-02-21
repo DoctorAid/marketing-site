@@ -5,6 +5,7 @@ import Features from './components/Features';
 import Connection from './components/Connection';
 import Practice from './components/Practice';
 import Management from './components/Management';
+import AboutPage from './components/About';
 import './index.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Connection />
       <Practice />
       <Management />
+      <AboutPage />
     </div>
   );
 }

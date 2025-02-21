@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+
 
 const Navbar = () => {
   return (
@@ -8,6 +9,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <span className="text-2xl font-bold text-primary">D</span>
           </div>
+          
           <div className="flex items-center  justify-center space-x-4">
             <a href="#" className="text-gray-600 hover:text-primary">Home</a>
             <a href="#" className="text-gray-600 hover:text-primary">Doctors</a>
