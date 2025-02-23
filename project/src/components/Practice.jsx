@@ -1,50 +1,56 @@
-import React from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Practice = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div>
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-4xl font-bold mb-12">
               Your Practice,<br />
               Your Way!
             </h2>
-            <div className="flex flex-cols-1 justify-center md:grid-cols-1 lg:grid-cols-4 gap-12 ">
-
-            <div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
-    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
-    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
-    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
-    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
-</div>
-</div>
-<div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
-    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
-    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
-    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
-    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
-</div>
-</div>
-<div className="flex flex-col max-w-7xl items-center justify-center "><div class="w-[221px] h-[246px] relative">
-    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
-    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
-    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
-    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
-</div>
-</div>
-</div>
-<div className="max-w-7xl items-left justify-left "><div class="w-[221px] h-[246px] relative">
-    <div class="w-[221px] h-[246px] left-0 top-0 absolute bg-white rounded-[29px] shadow-md hover:shadow-lg transition-shadow"></div>
-    <img class="w-[76px] h-[76px] left-[73px] top-[41px] absolute" src="https://placehold.co/76x76" />
-    <div class="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Search for trusted GPs near you<br/></div>
-    <div class="w-[158px] h-[45px] left-[36px] top-[136px] absolute text-black text-2xl font-bold font-['Raleway']">Find a Doctor</div>
-</div>
-</div>
+            <div className="grid grid-cols-2 gap-6">
+              {/* First Row */}
+              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
+                <img className="w-[76px] h-[76px] mb-4" src="https://placehold.co/76x76" alt="Feature icon" />
+                <h3 className="text-2xl font-bold text-center mb-2">Comprehensive Dashboard</h3>
+                <p className="text-center text-base">Track and manage your patients in one place</p>
+              </div>
+              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
+                <img className="w-[76px] h-[76px] mb-4" src="https://placehold.co/76x76" alt="Feature icon" />
+                <h3 className="text-2xl font-bold text-center mb-2">Flexible Scheduling</h3>
+                <p className="text-center text-base">Customize appointments based on your availability</p>
+              </div>
+              {/* Second Row */}
+              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
+                <img className="w-[76px] h-[76px] mb-4" src="https://placehold.co/76x76" alt="Feature icon" />
+                <h3 className="text-2xl font-bold text-center mb-2">Digital Prescriptions</h3>
+                <p className="text-center text-base">Provide e-prescriptions with ease</p>
+              </div>
+              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
+                <img className="w-[76px] h-[76px] mb-4" src="https://placehold.co/76x76" alt="Feature icon" />
+                <h3 className="text-2xl font-bold text-center mb-2">Professional Profile</h3>
+                <p className="text-center text-base">Reach out to new patients</p>
+              </div>
+            </div>
+            <div className="mt-8">
+              <button
+                onClick={() => navigate('/coming-soon')}
+                className="text-primary hover:text-blue-700 font-semibold"
+              >
+                Download Now
+              </button>
+            </div>
           </div>
           <div className="relative">
-            <img src="/src/assets/young-doctor-getting-ready-work.png" alt="Laptop" className=" w-[150%] h-auto" />
+            <img 
+              src="/src/assets/young-doctor-getting-ready-work.png" 
+              alt="Doctor" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

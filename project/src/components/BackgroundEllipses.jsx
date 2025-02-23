@@ -35,13 +35,15 @@ const Circle = ({ size, initialX, initialY }) => {
 const BackgroundCircles = () => {
   const circles = [
     { size: 470, x: 614, y: 504 },    // Large circle
+    { size: 400, x: 100, y: 100 },    // Medium circle
     { size: 300, x: 200, y: 300 },    // Medium circle
     { size: 250, x: 500, y: 400 },    // Small circle
+    { size: 200, x: 800, y: 600 },    // Smaller circle
   ];
 
   return (
     <div style={{ 
-      position: 'fixed', 
+      position: 'absolute', // changed from 'fixed' to 'absolute'
       inset: 0, 
       overflow: 'hidden'
     }}>

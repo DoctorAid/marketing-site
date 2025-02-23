@@ -1,7 +1,13 @@
-import React from 'react';
 import { Instagram } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-[#1B4B5A] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +26,7 @@ const Footer = () => {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Follow Us</h3>
               <a
-                href="YOUR_INSTAGRAM_URL_HERE"
+                href="https://www.instagram.com/doctoraid.official/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-white hover:text-gray-300 transition-colors"
@@ -34,21 +40,36 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Explore</h3>
             <nav className="flex flex-col space-y-2">
-              <a href="/" className="text-gray-300 hover:text-white transition-colors">
+              <button 
+                onClick={() => scrollToSection('hero')} 
+                className="text-left text-gray-300 hover:text-white transition-colors"
+              >
                 Home
-              </a>
-              <a href="/doctors" className="text-gray-300 hover:text-white transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('practice')} 
+                className="text-left text-gray-300 hover:text-white transition-colors"
+              >
                 Doctors
-              </a>
-              <a href="/patients" className="text-gray-300 hover:text-white transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('features')}
+                className="text-left text-gray-300 hover:text-white transition-colors"
+              >
                 Patients
-              </a>
-              <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                Contact
-              </a>
-              <a href="/about" className="text-gray-300 hover:text-white transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-left text-gray-300 hover:text-white transition-colors"
+              >
                 About Us
-              </a>
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="text-left text-gray-300 hover:text-white transition-colors"
+              >
+                Contact
+              </button>
             </nav>
           </div>
 

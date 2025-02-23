@@ -1,4 +1,3 @@
-import React from 'react';
 import { Instagram } from 'lucide-react';
 
 const Contact = () => {
@@ -20,7 +19,7 @@ const Contact = () => {
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-[#5296B8] mb-4">Follow Us</h3>
               <a
-                href="YOUR_INSTAGRAM_URL_HERE"
+                href="https://www.instagram.com/doctoraid.official/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-[#5296B8] hover:text-[#407a94] transition-colors"
