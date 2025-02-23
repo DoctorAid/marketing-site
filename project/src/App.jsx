@@ -6,6 +6,8 @@ import Connection from './components/Connection';
 import Practice from './components/Practice';
 import Management from './components/Management';
 import AboutPage from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './index.css';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       <Practice />
       <Management />
       <AboutPage />
+      <Contact />
+      <Footer/>
     </div>
   );
 }
