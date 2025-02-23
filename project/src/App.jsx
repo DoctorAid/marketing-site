@@ -12,7 +12,8 @@ import './index.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="relative min-h-screen bg-gray-50">
+      {/* Main Content */}
       <Navbar />
       <Hero />
       <Features />
@@ -21,7 +22,7 @@ function App() {
       <Management />
       <AboutPage />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
