@@ -95,8 +95,20 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             ))}
             
             <button 
-              onClick={onJoinDoctorClick}
-              className="border border-primary text-primary px-4 py-1.5 rounded-md hover:bg-primary hover:text-white transition-all duration-200 font-semibold transform hover:scale-105"
+              onClick={() => scrollToSection('about')}
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+            >
+              About Us
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+            >
+              Contacts
+            </button>
+            <button 
+              onClick={() => navigate('/coming-soon')}
+              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-semibold"
             >
               Join as a Doctor
             </button>
