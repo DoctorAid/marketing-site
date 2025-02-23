@@ -25,7 +25,7 @@ const Circle = ({ size, initialX, initialY }) => {
       height: `${size}px`,
       left: `${position.x}px`,
       top: `${position.y}px`,
-      background: '#C9E4F3',
+      background: '#5296B8',
       filter: 'blur(100px)',
       transition: 'all 5s ease-in-out'
     }} />

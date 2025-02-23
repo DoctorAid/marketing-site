@@ -16,10 +16,12 @@ const Features = () => {
   const navigate = useNavigate();
 
   return (
+    
     <div className="py-20">
+      
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">
-          Effortless at<br />Your Fingertips
+          Effortless Healthcare at<br />Your Fingertips
         </h2>
       </div>
       <div className="flex flex-cols-1 justify-center md:grid-cols-1 lg:grid-cols-4 gap-12">
@@ -49,8 +51,8 @@ const Features = () => {
             <div className="w-[76px] h-[76px] left-[73px] top-[41px] absolute flex items-center justify-center">
               <ClipboardList size={48} className="text-[#5296B8]" />
             </div>
-            <div className="w-[200px] h-[45px] left-[10px] top-[136px] absolute text-center text-black text-xl font-bold font-['Raleway']">Record Keeping</div>
-            <div className="w-[140px] h-[45px] left-[41px] top-[174px] absolute text-center text-black text-base font-normal font-['Raleway']">Keep your medical records organized and secure</div>
+            <div className="w-[200px] h-[45px] left-[10px] top-[120px] absolute text-center text-black text-xl font-bold font-['Raleway']">Record Keeping</div>
+            <div className="w-[140px] h-[45px] left-[41px] top-[160px] absolute text-center text-black text-base font-normal font-['Raleway']">Keep your medical records organized and secure</div>
           </div>
         </div>
         <div className="flex flex-col max-w-7xl items-center justify-center">

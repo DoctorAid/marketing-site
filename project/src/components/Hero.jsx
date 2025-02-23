@@ -29,7 +29,7 @@ const Hero = () => {
             </p>
             <button 
               onClick={() => navigate('/coming-soon')}
-              className="ml-4 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white hover:border-darkblue transition-colors"
+              className=" bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white hover:border-darkblue transition-colors"
             >
               Join as  a Doctor
             </button>
