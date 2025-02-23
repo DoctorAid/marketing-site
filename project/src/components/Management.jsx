@@ -1,7 +1,37 @@
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 
 const Management = () => {
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            setIsVisible(true);
+          });
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.3,
+        rootMargin: '100px'
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-primary">
@@ -22,8 +52,13 @@ const Management = () => {
               Get App
             </button>
           </div>
-          <div className="relative">
-            <img src="/src/assets/lap.png" alt="Laptop" className="w-full" />
+          <div className="relative" ref={imageRef}>
+            <img 
+              src="/src/assets/lap.png" 
+              alt="Laptop" 
+              className={`w-full transition-transform duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] 
+                ${isVisible ? 'transform scale-100 opacity-100 translate-y-0' : 'transform scale-110 opacity-0 translate-y-8'}`}
+            />
           </div>
         </div>
       </div>

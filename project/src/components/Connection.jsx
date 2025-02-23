@@ -54,7 +54,7 @@ const Connection = () => {
                 src="/src/assets/docphone.png" 
                 alt="Doctor using mobile app" 
                 className={`
-                  w-full h-[600px] object-cover object-top
+                  w-full h-[600px] object-cover
                   transition-all duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
                   will-change-transform
                   ${isVisible ? 
