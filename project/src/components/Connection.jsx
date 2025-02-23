@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Connection = () => {
@@ -18,7 +17,7 @@ const Connection = () => {
             </p>
             <button
               onClick={() => navigate('/coming-soon')}
-              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-blue-50"
+              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors"
             >
               Download Now
             </button>

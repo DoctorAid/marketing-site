@@ -1,7 +1,9 @@
-import React from 'react';
 import BackgroundEllipses from './BackgroundEllipses';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-light h-screen relative overflow-hidden">
       <BackgroundEllipses />
@@ -14,16 +16,22 @@ const Hero = () => {
               Healthcare World
             </h1>
             <p className="text-gray-600 text-[16px] mb-4">
-              DoctorAid is a seamless healthcare platform connecting general practitioners and patients. It features an intuitive app for patients and a powerful doctor's dashboard for efficient patient management, enhancing communication and care.
+              DoctorAid is a seamless healthcare platform connecting general practitioners and patients. It features an intuitive app for patients and a powerful doctor&apos;s dashboard for efficient patient management, enhancing communication and care.
             </p>
-            <button className="bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary">
+            <button 
+              onClick={() => navigate('/coming-soon')}
+              className="bg-primary text-white px-6 py-3 rounded-md hover:bg-darkblue transition-colors"
+            >
               Get App →
             </button>
-            <p className="text-darkblue text-[16px] mb-3 mt-">
+            <p className="text-darkblue text-[16px] mb-3 mt-6">
               Need to register as a Doctor?
             </p>
-            <button className="ml-4 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-primary hover:text-white">
-              Join as Doctor
+            <button 
+              onClick={() => navigate('/coming-soon')}
+              className="ml-4 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white hover:border-darkblue transition-colors"
+            >
+              Join as  a Doctor
             </button>
           </div>
           <div className="relative">

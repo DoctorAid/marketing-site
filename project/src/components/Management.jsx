@@ -17,7 +17,7 @@ const Management = () => {
             </p>
             <button
               onClick={() => navigate('/coming-soon')}
-              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-blue-50"
+              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors"
             >
               Get App
             </button>
