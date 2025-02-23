@@ -38,21 +38,7 @@ const Connection = () => {
     <div className="bg-primary relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Connect with<br />
-              Your Doctor
-            </h2>
-            <p className="text-blue-100 mb-8">
-              Experience seamless communication with your healthcare provider through DoctorAid. Schedule appointments, receive timely reminders, and stay connected with your doctor for better healthcare management.
-            </p>
-            <button
-              onClick={() => navigate('/coming-soon')}
-              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors"
-            >
-              Download Now
-            </button>
-          </div>
+        
           <div 
             ref={imageRef}
             className="relative h-[400px] overflow-visible will-change-transform"
@@ -77,17 +63,22 @@ const Connection = () => {
                   }
                 `}
               />
-              <div 
-                className={`
-                  absolute inset-0 
-                  transition-opacity duration-1000 ease-in-out
-                  ${isVisible ? 
-                    'opacity-0' : 
-                    'opacity-100 bg-primary'
-                  }
-                `}
-              />
             </div>
+          </div>
+          <div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Connect with<br />
+              Your Doctor
+            </h2>
+            <p className="text-blue-100 mb-8">
+              Experience seamless communication with your healthcare provider through DoctorAid. Schedule appointments, receive timely reminders, and stay connected with your doctor for better healthcare management.
+            </p>
+            <button
+              onClick={() => navigate('/coming-soon')}
+              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors"
+            >
+              Download Now
+            </button>
           </div>
         </div>
       </div>
