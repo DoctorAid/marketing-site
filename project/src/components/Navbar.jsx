@@ -25,43 +25,43 @@ const Navbar = () => {
           <div className="flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('practice')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               Doctors
             </button>
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               Patients
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               About Us
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               Contacts
             </button>
             <button 
               onClick={() => navigate('/coming-soon')}
-              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-semibold"
+              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-medium"
             >
               Join as a Doctor
             </button>
             <button 
               onClick={() => navigate('/coming-soon')}
-              className="bg-primary text-white px-4 py-1.5 rounded hover:bg-darkblue transition-colors font-semibold"
+              className="bg-primary text-white px-4 py-1.5 rounded hover:bg-darkblue transition-colors font-medium"
             >
               Get App
             </button>
