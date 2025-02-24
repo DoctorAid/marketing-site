@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import {Stethoscope } from "lucide-react";
+
 
 const Management = () => {
   const navigate = useNavigate();
@@ -34,16 +36,18 @@ const Management = () => {
             <p className="text-blue-100 mb-8">
               DoctorAid helps GPs focus on their patients by providing a smart, efficient way to manage appointments, send reminders, and practice admin in one place.
             </p>
-            <button
-              onClick={() => navigate('/coming-soon')}
-              className="bg-white text-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors"
-            >
-              Get App
-            </button>
+            <button 
+                className="group relative overflow-hidden w-100 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:scale-105
+                  hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 z-10" />
+                <span className="font-medium relative z-10">Join as a Doctor</span>
+                <div className="absolute inset-0 group-hover:text-darkblue  duration-300" />
+              </button>
           </div>
           <div className="relative overflow-hidden ">
             {/* Background glow effect */}
-            <div className={`absolute inset-0  transition-opacity duration-1000 ease-in-out
+            <div className={`absolute inset-0  transition-opacity duration-1000 ease-in-outx
               ${animationState !== 'initial' ? 'opacity-60' : 'opacity-0'}`}
             />
             

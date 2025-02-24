@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download,Stethoscope } from "lucide-react";
 
 const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -169,12 +169,18 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
               <p className="text-darkblue text-[16px] mb-2 mt-6">
                 Staring your own practice?Staring your own practice?
               </p>
+             
+
               <button 
                 onClick={onJoinDoctorClick}
-                className="bg-white text-primary border border-primary px-6 py-3 rounded-md hover:bg-darkblue hover:text-white hover:border-darkblue transition-all duration-300 transform hover:scale-105"
+                className="group relative overflow-hidden w-100 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:scale-105
+                  hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Join as a Doctor
+                <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 z-10" />
+                <span className="font-medium relative z-10">Join as a Doctor</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
+
             </div>
           </div>
 
