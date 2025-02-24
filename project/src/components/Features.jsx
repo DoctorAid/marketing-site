@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { UserSearch, Calendar, ClipboardList, History } from 'lucide-react';
 
 const FeatureCard = ({ icon, title, description }) => (
-  <div className="w-[221px] h-[246px] relative bg-light rounded-[29px] shadow-md hover:shadow-lg transition-all duration-300">
+  <div className="w-[221px] h-[270px] relative bg-light rounded-[29px] shadow-md hover:shadow-lg transition-all duration-300">
     <div className="absolute top-[41px] left-1/2 -translate-x-1/2">
       <div className="w-[76px] h-[76px] flex items-center justify-center">
         {icon}

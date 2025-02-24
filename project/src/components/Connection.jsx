@@ -36,16 +36,16 @@ const Connection = () => {
 
   return (
     <div className="bg-primary relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
           <div 
             ref={imageRef}
-            className="relative h-[400px] overflow-visible will-change-transform"
+            className="relative h-[500px] overflow-hidden will-change-transform"
           >
             <div 
               className={`
-                absolute top-0 -bottom-40 right-0 left-0
+                absolute top-0 -bottom-40 right-0 left-0 z-9
                 transition-transform duration-1000 ease-out
                 ${isVisible ? 'translate-y-0' : 'translate-y-[100px]'}
               `}
@@ -54,9 +54,9 @@ const Connection = () => {
                 src="/docphone.png" 
                 alt="Doctor using mobile app" 
                 className={`
-                  w-full h-[600px] object-cover
+                  w-full h-auto
                   transition-all duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                  will-change-transform
+                  will-change-transform 
                   ${isVisible ? 
                     'transform scale-100 opacity-100 translate-y-0' : 
                     'transform scale-110 opacity-0 translate-y-8'
