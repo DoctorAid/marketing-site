@@ -161,9 +161,9 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                   overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
                   flex items-center gap-3"
               >
-                <Download className="w-5 h-5 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                <Download className="w-5 h-5 transition-transform duration-500  group-hover:text-primary" />
                 <span className="font-medium">Get App</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" />
+                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:-translate-x-[-5px] group-hover:text-black " />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               <p className="text-darkblue text-[16px] mb-2 mt-6">
