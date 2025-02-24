@@ -51,7 +51,7 @@ const Connection = () => {
               `}
             >
               <img 
-                src="/public/docphone.png" 
+                src="/docphone.png" 
                 alt="Doctor using mobile app" 
                 className={`
                   w-full h-[600px] object-cover
