@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Menu, X, Download, ArrowRight, Stethoscope } from 'lucide-react';
 
 const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,6 +13,18 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menu when window is resized to desktop size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -30,14 +43,16 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
   ];
 
   return (
-    <nav className={`
-      fixed top-0 left-0 right-0 z-50
-      transition-all duration-300 ease-in-out
-      ${isScrolled ? 
-        'mt-4 mx-4 lg:mx-12 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg' : 
-        'bg-[#D4E5F5]'
-      }
-    `}>
+    <nav 
+      className={`
+        fixed top-0 left-0 right-0 z-50
+        transition-all duration-300 ease-in-out
+        ${isScrolled ? 
+          'mt-4 mx-4 lg:mx-12 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg' : 
+          'bg-[#D4E5F5]'
+        }
+      `}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -52,80 +67,91 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             />
           </button>
           
-          <div className="flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('practice')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
-            >
-              Doctors
-            </button>
-            <button 
-              onClick={() => scrollToSection('features')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
-            >
-              Patients
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
-            >
-              About Us
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
-            >
-              Contacts
-            </button>
-            <button 
-              onClick={() => navigate('/coming-soon')}
-              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-semibold"
-            >
-              Join as a Doctor
-            </button>
-            
-            <button 
-              onClick={() => navigate('/coming-soon')}
-              className="bg-primary text-white px-4 py-1.5 rounded hover:bg-darkblue transition-colors font-semibold"
-            >
-              Get App
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`
-          lg:hidden
-          transition-all duration-300 ease-in-out
-          ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
-          overflow-hidden
-        `}>
-          <div className="py-2 space-y-1">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
               <button 
                 key={item.name}
                 onClick={() => scrollToSection(item.section)}
-                className="block w-full text-left px-4 py-2 text-[#1B4B5A] hover:bg-primary/10 hover:text-primary transition-colors text-base font-semibold"
+                className="text-[#1B4B5A] hover:text-primary transition-colors duration-200 text-base font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
               >
                 {item.name}
               </button>
             ))}
             
-            <div className="px-4 py-3 space-y-2">
+            <button 
+              onClick={onJoinDoctorClick}
+              className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md
+                hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12" />
+              <span className="font-medium relative z-10">Join as a Doctor</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+            
+            <button 
+              onClick={onGetAppClick}
+              className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-5 py-2 rounded-md
+                overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+                flex items-center gap-2"
+            >
+              <Download className="w-4 h-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
+              <span className="font-medium">Get App</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-md text-[#1B4B5A] hover:bg-primary/10 transition-colors duration-200 focus:outline-none"
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {isMenuOpen ? (
+              <X size={24} className="transition-transform duration-300 ease-in-out" />
+            ) : (
+              <Menu size={24} className="transition-transform duration-300 ease-in-out" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div 
+          className={`
+            lg:hidden
+            transition-all duration-300 ease-in-out
+            ${isMenuOpen 
+              ? 'max-h-screen opacity-100 border-t border-gray-200 mt-2' 
+              : 'max-h-0 opacity-0 border-t-0'
+            }
+            overflow-hidden
+          `}
+        >
+          <div className="py-3 space-y-1">
+            {navItems.map((item) => (
+              <button 
+                key={item.name}
+                onClick={() => scrollToSection(item.section)}
+                className="block w-full text-left px-4 py-3 text-[#1B4B5A] hover:bg-primary/10 hover:text-primary transition-all duration-200 text-base font-semibold rounded-md"
+              >
+                {item.name}
+              </button>
+            ))}
+            
+            <div className="px-4 py-4 space-y-3 mt-2">
               <button 
                 onClick={() => {
                   onJoinDoctorClick();
                   setIsMenuOpen(false);
                 }}
-                className="w-full border border-primary text-primary px-4 py-1.5 rounded-md hover:bg-primary hover:text-white transition-all duration-200 font-semibold"
+                className="group relative overflow-hidden w-full bg-white text-primary border border-primary px-5 py-2.5 rounded-md
+                  hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Join as a Doctor
+                <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12" />
+                <span className="font-medium relative z-10">Join as a Doctor</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               
               <button 
@@ -133,9 +159,14 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
                   onGetAppClick();
                   setIsMenuOpen(false);
                 }}
-                className="w-full bg-primary text-white px-4 py-1.5 rounded-md hover:bg-darkblue transition-all duration-200 font-semibold hover:shadow-md"
+                className="group relative w-full bg-gradient-to-r from-primary to-blue-400 text-white px-5 py-2.5 rounded-md
+                  overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+                  flex items-center justify-center gap-2"
               >
-                Get App
+                <Download className="w-4 h-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                <span className="font-medium">Get App</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </div>
           </div>

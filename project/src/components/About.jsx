@@ -15,35 +15,35 @@ const AboutPage = () => {
       id: 2, 
       name: "Sakith Seneviratne", 
       role: "Team Member",
-      imagePath: "/Sakith.jpg",
+      imagePath: "/Sakith.png",
       linkedIn: "https://www.linkedin.com/in/sakith-seneviratne-8341a9269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     { 
       id: 3, 
       name: "Nimesha Dahanayaka", 
       role: "Team Member",
-      imagePath: "/Nimesha.jpg",
+      imagePath: "/Nimesha.png",
       linkedIn: "https://www.linkedin.com/in/nimesha-dahanayaka-104649265"
     },
     { 
       id: 4, 
       name: "Lakmindee Jayamanne", 
       role: "Team Member",
-      imagePath: "/Lakmindee.jpg",
+      imagePath: "/Lakmindee.png",
       linkedIn: "http://www.linkedin.com/in/lakmindee-jayamanne-a3838a193"
     },
     { 
       id: 5, 
       name: "Chanugi Bandara", 
       role: "Team Member",
-      imagePath: "/Chanugi.jpg",
+      imagePath: "/Chanugi.png",
       linkedIn: "https://www.linkedin.com/in/miyunika-bandara-3a3489339/"
     },
     { 
       id: 6, 
       name: "Amaya Subasinghe", 
       role: "Team Member",
-      imagePath: "/Amaya.jpg",
+      imagePath: "/Amaya.png",
       linkedIn: "https://www.linkedin.com/in/amaya-subasinghe-3b0193294"
     },
   ];
