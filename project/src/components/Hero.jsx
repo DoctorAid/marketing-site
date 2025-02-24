@@ -184,7 +184,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
               transform: `translateY(${scrollY * -0.2}px)`
             }}
           >
-            <div className="relative w-[1000px]  pt-40 h-[900px]">
+            <div className="relative w-[1000px]  pr-40 pt-40 h-[900px]">
               <div className="absolute -inset-4 bg-secondary-100 rounded-full blur-3xl opacity-20 animate-pulse" />
               <img
                 src="/mokck ne.png"

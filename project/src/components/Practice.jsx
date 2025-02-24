@@ -69,10 +69,10 @@ const Practice = () => {
 
   return (
     <div className="py-20 bg-secondary z-999">
-      <div className="container mx-auto px-4  ">
+      <div className="container mx-auto px-12  ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
           <div>
-            <h2 className="text-4xl font-bold mb-12">
+            <h2 className="text-4xl font-bold mb-12 text-darkblue">
               Your Practice,<br />
               Your Way!
             </h2>
@@ -85,15 +85,8 @@ const Practice = () => {
                 />
               ))}
             </div>
-            <div className="mt-8">
-              <button
-                className="text-primary hover:text-darkblue transition-colors font-semibold"
-              >
-                Download Now
-              </button>
-            </div>
           </div>
-          <div className="relative h-full overflow-hidden  p-0">
+          <div className="relative h-full overflow-hidden p-0">
             <img 
               src="/young-doctor-getting-ready-work.png" 
               alt="Doctor" 
