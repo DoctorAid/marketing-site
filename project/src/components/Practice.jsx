@@ -93,7 +93,7 @@ const Practice = () => {
               </button>
             </div>
           </div>
-          <div className="relative h-full overflow-hidden bg-yellow-300 p-0">
+          <div className="relative h-full overflow-hidden  p-0">
             <img 
               src="/young-doctor-getting-ready-work.png" 
               alt="Doctor" 
