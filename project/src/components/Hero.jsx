@@ -144,7 +144,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
           transform: `translateY(${scrollY * 0.1}px)`
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-[-100px] items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <h1 className="text-4xl md:text-5xl lg:text-[74px] leading-tight lg:leading-[76px] font-bold mb-4 mt-24 md:mt-[100px]">
               Your <span className="text-primary">Bridge</span> to<br />
@@ -161,9 +161,9 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                   overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
                   flex items-center gap-3"
               >
-                <Download className="w-5 h-5 transition-transform duration-500  group-hover:text-primary" />
-                <span className="font-medium">Get App</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:-translate-x-[-5px] group-hover:text-black " />
+                <Download className="w-5 h-5 transition-transform duration-500  group-hover:text-primary z-10" />
+                <span className="font-medium z-10">Get App</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:-translate-x-[-5px] group-hover:text-black z-10 " />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               <p className="text-darkblue text-[16px] mb-2 mt-6">
