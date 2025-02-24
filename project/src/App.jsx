@@ -9,6 +9,8 @@ import AboutPage from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
+import EarlyAccess from './components/EarlyAccess';
+
 import './index.css';
 
 function MainLayout() {
@@ -33,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/early-access" element={<EarlyAccess />}/>
       </Routes>
     </Router>
   );

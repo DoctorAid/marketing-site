@@ -54,8 +54,8 @@ const Navbar = () => {
               Contacts
             </button>
             <button 
-              onClick={() => navigate('/coming-soon')}
-              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-medium"
+              onClick={() => navigate('/early-access')}
+              className="border border-primary text-primary px-4 py-1.5 rounded hover:bg-primary hover:text-white transition-colors font-semibold"
             >
               Join as a Doctor
             </button>
