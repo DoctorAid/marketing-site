@@ -61,7 +61,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
             }}
           >
             <img
-              src="/public/mokck ne.png"
+              src="/src/assets/mokck ne.png"
               alt="Platform mockup"
               className="w-full h-150 transition-transform duration-300 hover:scale-105"
             />

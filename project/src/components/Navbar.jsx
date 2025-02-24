@@ -51,58 +51,35 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
               className="h-5 w-auto"
             />
           </button>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-primary hover:bg-primary/10 transition-colors"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          
+          <div className="flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('hero')}
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
             >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <button 
-                key={item.name}
-                onClick={() => scrollToSection(item.section)}
-                className="relative text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold group"
-              >
-                {item.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
-              </button>
-            ))}
-            
+              Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('practice')}
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+            >
+              Doctors
+            </button>
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+            >
+              Patients
+            </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               About Us
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-semibold"
+              className="text-[#1B4B5A] hover:text-primary transition-colors text-base font-medium"
             >
               Contacts
             </button>
@@ -114,8 +91,8 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             </button>
             
             <button 
-              onClick={onGetAppClick}
-              className="bg-primary text-white px-4 py-1.5 rounded-md hover:bg-darkblue transition-all duration-200 font-semibold transform hover:scale-105 hover:shadow-md"
+              onClick={() => navigate('/coming-soon')}
+              className="bg-primary text-white px-4 py-1.5 rounded hover:bg-darkblue transition-colors font-semibold"
             >
               Get App
             </button>
