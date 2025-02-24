@@ -46,7 +46,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             className="flex items-center transform hover:scale-110 transition-transform duration-200"
           >
             <img 
-              src="/src/assets/Asset 3.svg" 
+              src="/Asset 3.svg" 
               alt="Logo" 
               className="h-5 w-auto"
             />

@@ -54,7 +54,7 @@ const Management = () => {
           </div>
           <div className="relative" ref={imageRef}>
             <img 
-              src="/src/assets/lap.png" 
+              src="/lap.png" 
               alt="Laptop" 
               className={`w-full transition-transform duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] 
                 ${isVisible ? 'transform scale-100 opacity-100 translate-y-0' : 'transform scale-110 opacity-0 translate-y-8'}`}

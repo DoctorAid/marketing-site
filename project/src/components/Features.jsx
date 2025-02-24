@@ -95,7 +95,7 @@ const Features = () => {
 
       <div className="flex items-center justify-center">
         <img 
-          src="/src/assets/child-cheerful-laughing-parent.png" 
+          src="/public/child-cheerful-laughing-parent.png" 
           alt="Happy family" 
           className="mb-[-4.85%] w-[50%] h-auto" 
         />

@@ -95,7 +95,7 @@ const Practice = () => {
           </div>
           <div className="relative">
             <img 
-              src="/src/assets/young-doctor-getting-ready-work.png" 
+              src="/young-doctor-getting-ready-work.png" 
               alt="Doctor" 
               className="w-full h-auto"
             />

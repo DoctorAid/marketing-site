@@ -8,42 +8,42 @@ const AboutPage = () => {
       id: 1, 
       name: "Sandith Sithmaka Thenuwra", 
       role: "Team Leader",
-      imagePath: "/src/assets/Sandith.png",
+      imagePath: "/public/Sandith.png",
       linkedIn: "https://www.linkedin.com/in/sandith02/"
     },
     { 
       id: 2, 
       name: "Sakith Seneviratne", 
       role: "Team Member",
-      imagePath: "/src/assets/Sakith.jpg",
+      imagePath: "/public/Sakith.jpg",
       linkedIn: "https://www.linkedin.com/in/sakith-seneviratne-8341a9269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     { 
       id: 3, 
       name: "Nimesha Dahanayaka", 
       role: "Team Member",
-      imagePath: "/src/assets/Nimesha.jpg",
+      imagePath: "/public/Nimesha.jpg",
       linkedIn: "https://www.linkedin.com/in/nimesha-dahanayaka-104649265"
     },
     { 
       id: 4, 
       name: "Lakmindee Jayamanne", 
       role: "Team Member",
-      imagePath: "/src/assets/Lakmindee.jpg",
+      imagePath: "/public/Lakmindee.jpg",
       linkedIn: "http://www.linkedin.com/in/lakmindee-jayamanne-a3838a193"
     },
     { 
       id: 5, 
       name: "Chanugi Bandara", 
       role: "Team Member",
-      imagePath: "/src/assets/Chanugi.jpg",
+      imagePath: "/public/Chanugi.jpg",
       linkedIn: "https://www.linkedin.com/in/miyunika-bandara-3a3489339/"
     },
     { 
       id: 6, 
       name: "Amaya Subasinghe", 
       role: "Team Member",
-      imagePath: "/src/assets/Amaya.jpg",
+      imagePath: "/public/Amaya.jpg",
       linkedIn: "https://www.linkedin.com/in/amaya-subasinghe-3b0193294"
     },
   ];
