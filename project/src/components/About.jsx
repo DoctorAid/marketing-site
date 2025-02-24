@@ -82,7 +82,7 @@ const AboutPage = () => {
                       href={member.linkedIn}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute inset-0 flex items-center justify-center bg-primary bg-opacity-50 rounded-full mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     >
                       <Linkedin className="w-8 h-8 text-white" />
                     </a>

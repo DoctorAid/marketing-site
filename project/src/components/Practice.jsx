@@ -1,8 +1,71 @@
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef } from 'react';
 import { LayoutDashboard, Calendar, FileText, UserCircle } from 'lucide-react';
 
+const AnimatedCard = ({ icon: Icon, title, description, delay = 0 }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="opacity-0 translate-y-4 transition-all duration-700 ease-out"
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
+        <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
+          <Icon size={48} />
+        </div>
+        <h3 className="text-2xl font-bold text-center mb-2">{title}</h3>
+        <p className="text-center text-base">{description}</p>
+      </div>
+    </div>
+  );
+};
+
 const Practice = () => {
-  const navigate = useNavigate();
+  const features = [
+    {
+      icon: LayoutDashboard,
+      title: "Comprehensive Dashboard",
+      description: "Track and manage your patients in one place"
+    },
+    {
+      icon: Calendar,
+      title: "Flexible Scheduling",
+      description: "Customize appointments based on your availability"
+    },
+    {
+      icon: FileText,
+      title: "Digital Prescriptions",
+      description: "Provide e-prescriptions with ease"
+    },
+    {
+      icon: UserCircle,
+      title: "Professional Profile",
+      description: "Reach out to new patients"
+    }
+  ];
 
   return (
     <div className="py-20">
@@ -14,45 +77,16 @@ const Practice = () => {
               Your Way!
             </h2>
             <div className="grid grid-cols-2 gap-6">
-              {/* Comprehensive Dashboard Card */}
-              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
-                <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
-                  <LayoutDashboard size={48} />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-2">Comprehensive Dashboard</h3>
-                <p className="text-center text-base">Track and manage your patients in one place</p>
-              </div>
-
-              {/* Flexible Scheduling Card */}
-              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
-                <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
-                  <Calendar size={48} />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-2">Flexible Scheduling</h3>
-                <p className="text-center text-base">Customize appointments based on your availability</p>
-              </div>
-
-              {/* Digital Prescriptions Card */}
-              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
-                <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
-                  <FileText size={48} />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-2">Digital Prescriptions</h3>
-                <p className="text-center text-base">Provide e-prescriptions with ease</p>
-              </div>
-
-              {/* Professional Profile Card */}
-              <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
-                <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
-                  <UserCircle size={48} />
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-2">Professional Profile</h3>
-                <p className="text-center text-base">Reach out to new patients</p>
-              </div>
+              {features.map((feature, index) => (
+                <AnimatedCard
+                  key={index}
+                  delay={index * 100}
+                  {...feature}
+                />
+              ))}
             </div>
             <div className="mt-8">
               <button
-                onClick={() => navigate('/coming-soon')}
                 className="text-primary hover:text-darkblue transition-colors font-semibold"
               >
                 Download Now
@@ -73,3 +107,13 @@ const Practice = () => {
 };
 
 export default Practice;
+
+// Add this CSS to your global styles
+const style = document.createElement('style');
+style.textContent = `
+  .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+`;
+document.head.appendChild(style);
