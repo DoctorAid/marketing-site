@@ -167,7 +167,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               <p className="text-darkblue text-[16px] mb-2 mt-6">
-                Need to register as a Doctor?
+                Staring your own practice?Staring your own practice?
               </p>
               <button 
                 onClick={onJoinDoctorClick}
@@ -184,12 +184,12 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
               transform: `translateY(${scrollY * -0.2}px)`
             }}
           >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-20 animate-pulse" />
+            <div className="relative w-[1000px]  pt-40 h-[900px]">
+              <div className="absolute -inset-4 bg-secondary-100 rounded-full blur-3xl opacity-20 animate-pulse" />
               <img
                 src="/mokck ne.png"
                 alt="Platform mockup"
-                className="w-full h-auto relative z-10 transition-transform duration-300 hover:scale-105"
+                className="w-full h-auto scale-600 relative z-10 transition-transform duration-300 hover:scale-1000"
               />
             </div>
           </div>
