@@ -89,16 +89,13 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             </button>
             
             <button 
-              onClick={onGetAppClick}
-              className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-5 py-2 rounded-md
-                overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-                flex items-center gap-2"
-            >
-              <Download className="w-4 h-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 z-10" />
-              <span className="font-medium z-10">Get App</span>
-              <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 z-10" />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
+  onClick={onGetAppClick}
+  className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md hover:bg-darkblue hover:text-white transition-all duration-300 flex items-center gap-2"
+>
+  <span className="font-medium relative z-10">Get App</span>
+  <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 z-10" />
+  <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</button>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -158,9 +155,9 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
                   onGetAppClick();
                   setIsMenuOpen(false);
                 }}
-                className="group relative w-full bg-gradient-to-r from-primary to-blue-400 text-white px-5 py-2.5 rounded-md
+                className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-3 py-3 rounded-md
                   overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-                  flex items-center justify-center gap-2"
+                  flex items-center gap-3"
               >
                 <Download className="w-4 h-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
                 <span className="font-medium">Get App</span>
