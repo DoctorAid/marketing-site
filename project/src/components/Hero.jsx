@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { ArrowRight, Download, Stethoscope } from "lucide-react";
+import { ArrowRight, Stethoscope } from "lucide-react";
 
 const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
   const [scrollY, setScrollY] = useState(0);

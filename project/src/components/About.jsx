@@ -87,9 +87,8 @@ const AboutPage = () => {
                       <Linkedin className="w-8 h-8 text-white" />
                     </a>
                   </div>
-                  <h3 className="text-[#5296B8] font-semibold text-xl mb-2">{member.name}</h3>
-                  <p className="text-gray-600 text-lg">{member.role}</p>
-                </div>
+                  <h3 className="text-[#5296B8] font-light text-3xl  mx-12 mb-2">{member.name}</h3>
+=                </div>
               ))}
             </div>
           </section>

@@ -38,7 +38,7 @@ const Management = () => {
             </p>
             <button 
                 className="group relative overflow-hidden w-100 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:scale-105
-                  hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 z-10" />
                 <span className="font-medium relative z-10">Join as a Doctor</span>

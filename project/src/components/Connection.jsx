@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from "lucide-react";
+
 
 const Connection = () => {
   const navigate = useNavigate();
@@ -76,12 +78,15 @@ const Connection = () => {
             <p className="text-blue-100 mb-6 md:mb-8 text-sm sm:text-base">
               Experience seamless communication with your healthcare provider through DoctorAid. Schedule appointments, receive timely reminders, and stay connected with your doctor for better healthcare management.
             </p>
-            <button
-              onClick={() => navigate('/coming-soon')}
-              className="bg-white text-primary px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-darkblue hover:text-white transition-colors w-full sm:w-auto"
-            >
-              Download Now
-            </button>
+            <button 
+                className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-lg
+                  overflow-hidden transition-all duration-300 hover:shadow-lg
+                  flex items-center gap-3 w-full sm:w-auto"
+              >
+                <span className="font-medium z-10">Get App</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </button>
           </div>
         </div>
       </div>
