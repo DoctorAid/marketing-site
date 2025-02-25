@@ -32,12 +32,14 @@ const AnimatedCard = ({ icon: Icon, title, description, delay = 0 }) => {
       className="opacity-0 translate-y-4 transition-all duration-700 ease-out"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="bg-white rounded-[29px] p-6 shadow-md hover:shadow-lg transition-shadow h-[246px] flex flex-col items-center">
-        <div className="w-[76px] h-[76px] mb-4 flex items-center justify-center text-primary">
-          <Icon size={48} />
+      <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col items-center justify-between">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 mb-4 flex items-center justify-center text-primary">
+          <Icon className="w-10 h-10 sm:w-12 sm:h-12" strokeWidth={1.5} />
         </div>
-        <h3 className="text-2xl font-bold text-center mb-2">{title}</h3>
-        <p className="text-center text-base">{description}</p>
+        <div className="text-center">
+          <h3 className="text-darkblue text-lg sm:text-xl font-bold mb-3">{title}</h3>
+          <p className="text-gray-600 text-sm sm:text-base">{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -68,15 +70,15 @@ const Practice = () => {
   ];
 
   return (
-    <div className="py-20 bg-secondary z-999">
-      <div className="container mx-auto px-12  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+    <div className="relative py-16 sm:py-20 bg-gradient-to-br from-secondary-100 to-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 className="text-4xl font-bold mb-12 text-darkblue">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-darkblue leading-tight">
               Your Practice,<br />
               Your Way!
             </h2>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {features.map((feature, index) => (
                 <AnimatedCard
                   key={index}
@@ -86,11 +88,12 @@ const Practice = () => {
               ))}
             </div>
           </div>
-          <div className="relative h-full overflow-hidden p-0">
+          <div className="relative hidden lg:block">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary-100/50 to-transparent rounded-[40px] blur-3xl" />
             <img 
-              src="/young-doctor-getting-ready-work.png" 
-              alt="Doctor" 
-              className="w-[800px] h-[500px] mt-20"
+              src="/young-doctor-getting-ready-work.png"
+              alt="Doctor using digital tools" 
+              className="relative w-full h-[700px] object-cover object-center "
             />
           </div>
         </div>
@@ -100,13 +103,3 @@ const Practice = () => {
 };
 
 export default Practice;
-
-// Add this CSS to your global styles
-const style = document.createElement('style');
-style.textContent = `
-  .animate-in {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-`;
-document.head.appendChild(style);
