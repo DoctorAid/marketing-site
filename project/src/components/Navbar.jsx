@@ -39,7 +39,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
     { name: 'Doctors', section: 'practice' },
     { name: 'Patients', section: 'features' },
     { name: 'About Us', section: 'about' },
-    { name: 'Contacts', section: 'contact' }
+    { name: 'Contact', section: 'contact' }
   ];
 
   return (
@@ -97,7 +97,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
   <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 </button>
           </div>
-
+          
           {/* Mobile Hamburger Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
