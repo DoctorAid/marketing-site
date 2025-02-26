@@ -132,41 +132,31 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
               <button 
                 key={item.name}
                 onClick={() => scrollToSection(item.section)}
-                className="block w-full text-left px-4 py-3 text-[#1B4B5A] hover:bg-gradient-to-r hover:from-primary hover:to-blue-400 hover:text-transparent hover:bg-clip-text transition-all duration-200 text-base font-semibold rounded-md"
+                className="block w-full text-left px-4 py-3 text-[#1B4B5A] transition-all duration-200 text-base font-semibold rounded-md relative after:absolute after:bottom-2 after:left-4 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-blue-400 hover:after:w-20 after:transition-all after:duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-blue-400 hover:text-transparent hover:bg-clip-text"
               >
                 {item.name}
               </button>
             ))}
             
             <div className="px-4 py-4 space-y-3 mt-2">
-              <button 
-                onClick={() => {
-                  navigate('/early-access');
-                  setIsMenuOpen(false);
-                }}
-                className="group relative overflow-hidden w-full bg-white text-primary border border-primary px-5 py-2.5 rounded-md
-                  hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12" />
-                <span className="font-medium relative z-10">Join as a Doctor</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+            <button 
+              onClick={() => navigate('/early-access')}
+              className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md hover:bg-darkblue hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 hover:text-white z-10" />
+              <span className="font-medium relative z-10">Join as a Doctor</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
               
-              <button 
-                onClick={() => {
-                  navigate('/coming-soon');
-                  setIsMenuOpen(false);
-                }}
-                className="group relative bg-white text-primary border border-primary px-3 py-3 rounded-md
-                  overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]
-                  hover:bg-gradient-to-r hover:from-primary hover:to-blue-400 hover:text-white
-                  flex items-center gap-3"
-              >
-                <Download className="w-4 h-4 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1" />
-                <span className="font-medium">Get App</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+            <button 
+              onClick={() => navigate('/coming-soon')}
+              className="group relative overflow-hidden bg-gradient-to-r from-primary to-blue-400 text-white px-5 py-2 rounded-md hover:bg-white hover:text-primary hover:border hover:border-primary transition-all duration-300 flex items-center gap-2"
+            >
+              <span className="font-medium relative z-10">Get App</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 z-10" />
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
+              
             </div>
           </div>
         </div>
