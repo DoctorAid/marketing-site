@@ -22,9 +22,9 @@ const Contact = () => {
                 href="https://www.instagram.com/doctoraid.official/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-[#5296B8] hover:text-[#407a94] transition-colors"
+                className="relative inline-block text-[#5296B8] hover:text-[#5296B8] transition-colors cursor-pointer"
               >
-                <Instagram size={42} className="cursor-pointer" />
+                <Instagram size={32} className="hover:scale-110 transition-transform duration-200" />
               </a>
             </div>
           </div>
