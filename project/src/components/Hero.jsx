@@ -183,13 +183,13 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
             }}
           >
             <div className="relative w-full max-w-2xl mx-auto lg:max-w-none">
-              <div className="absolute -inset-4 bg-secondary-100 rounded-full blur-3xl opacity-20 animate-pulse" />
+              <div className="absolute -inset-4  animate-pulse" />
               <img
                 src="/mokck ne.png"
                 alt="Platform mockup"
-                className="w-full h-auto relative z-10 transition-transform duration-300 hover:scale-105"
+                className="w-full h-auto relative z-10 transition-transform duration-300 hover:scale-120"
                 style={{
-                  maxWidth: '100%',
+                  maxWidth: '150%',
                   height: 'auto'
                 }}
               />
