@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { LayoutDashboard, Calendar, FileText, UserCircle } from 'lucide-react';
 
 const AnimatedCard = ({ icon: Icon, title, description, delay = 0 }) => {
@@ -69,6 +69,38 @@ const Practice = () => {
     }
   ];
 
+  // Added state for image visibility
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Small delay to ensure smoother animation
+          requestAnimationFrame(() => {
+            setIsVisible(true);
+          });
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.3, // Increased threshold for better timing
+        rootMargin: '100px' // Increased margin to start animation earlier
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="relative py-16 sm:py-20 bg-gradient-to-br from-secondary-100 to-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
@@ -88,13 +120,32 @@ const Practice = () => {
               ))}
             </div>
           </div>
-          <div className="relative hidden lg:block">
+          <div 
+            ref={imageRef}
+            className="relative hidden lg:block h-[700px] will-change-transform"
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-secondary-100/50 to-transparent rounded-[40px] blur-3xl" />
-            <img 
-              src="/young-doctor-getting-ready-work.png"
-              alt="Doctor using digital tools" 
-              className="relative w-full h-[700px] object-cover object-center"
-            />
+            <div 
+              className={`
+                absolute top-0 bottom-0 right-0 left-0 z-9
+                transition-transform duration-1000 ease-out
+                ${isVisible ? 'translate-y-0' : 'translate-y-[100px]'}
+              `}
+            >
+              <img 
+                src="/young-doctor-getting-ready-work.png"
+                alt="Doctor using digital tools" 
+                className={`
+                  relative w-full h-full object-cover object-center
+                  transition-all duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                  will-change-transform  z-60
+                  ${isVisible ? 
+                    'transform scale-100 opacity-100 translate-y-0' : 
+                    'transform scale-110 opacity-0 translate-y-8'
+                  }
+                `}
+              />
+            </div>
           </div>
         </div>
       </div>
