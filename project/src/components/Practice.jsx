@@ -93,7 +93,7 @@ const Practice = () => {
             <img 
               src="/young-doctor-getting-ready-work.png"
               alt="Doctor using digital tools" 
-              className="relative w-full h-[700px] object-cover object-center "
+              className="relative w-full h-[700px] object-cover object-center"
             />
           </div>
         </div>

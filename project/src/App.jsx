@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="/early-access" element={<EarlyAccess />}/>
+        <Route path="/early-access" element={<EarlyAccess />} />
       </Routes>
     </Router>
   );

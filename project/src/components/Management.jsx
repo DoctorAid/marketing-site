@@ -37,6 +37,7 @@ const Management = () => {
               DoctorAid helps GPs focus on their patients by providing a smart, efficient way to manage appointments, send reminders, and practice admin in one place.
             </p>
             <button 
+                onClick={() => navigate('/early-access')}
                 className="group relative overflow-hidden w-100 bg-white text-primary border border-primary px-6 py-3 rounded-md hover:scale-105
                  transition-all duration-300 flex items-center justify-center gap-2"
               >

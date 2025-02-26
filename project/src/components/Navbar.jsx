@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Download, ArrowRight, Stethoscope } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +82,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             ))}
             
             <button 
-              onClick={onJoinDoctorClick}
+              onClick={() => navigate('/early-access')}
               className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md hover:bg-darkblue hover:text-white transition-all duration-300 flex items-center gap-2"
             >
               <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 hover:text-white z-10" />
@@ -89,13 +91,13 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             </button>
             
             <button 
-  onClick={onGetAppClick}
-  className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md hover:bg-darkblue hover:text-white transition-all duration-300 flex items-center gap-2"
->
-  <span className="font-medium relative z-10">Get App</span>
-  <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 z-10" />
-  <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-</button>
+              onClick={() => navigate('/coming-soon')}
+              className="group relative overflow-hidden bg-white text-primary border border-primary px-5 py-2 rounded-md hover:bg-darkblue hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
+              <span className="font-medium relative z-10">Get App</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
           </div>
           
           {/* Mobile Hamburger Button */}
@@ -139,7 +141,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
             <div className="px-4 py-4 space-y-3 mt-2">
               <button 
                 onClick={() => {
-                  onJoinDoctorClick();
+                  navigate('/early-access');
                   setIsMenuOpen(false);
                 }}
                 className="group relative overflow-hidden w-full bg-white text-primary border border-primary px-5 py-2.5 rounded-md
@@ -152,7 +154,7 @@ const Navbar = ({ onGetAppClick, onJoinDoctorClick }) => {
               
               <button 
                 onClick={() => {
-                  onGetAppClick();
+                  navigate('/coming-soon');
                   setIsMenuOpen(false);
                 }}
                 className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-3 py-3 rounded-md

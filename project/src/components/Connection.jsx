@@ -79,14 +79,15 @@ const Connection = () => {
               Experience seamless communication with your healthcare provider through DoctorAid. Schedule appointments, receive timely reminders, and stay connected with your doctor for better healthcare management.
             </p>
             <button 
-                className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-lg
-                  overflow-hidden transition-all duration-300 hover:shadow-lg
-                  flex items-center gap-3 w-full sm:w-auto"
-              >
-                <span className="font-medium z-10">Get App</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button>
+              onClick={() => navigate('/coming-soon')}
+              className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-lg
+                overflow-hidden transition-all duration-300 hover:shadow-lg
+                flex items-center gap-3 w-full sm:w-auto"
+            >
+              <span className="font-medium z-10">Get App</span>
+              <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
           </div>
         </div>
       </div>

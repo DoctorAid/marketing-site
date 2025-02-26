@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EarlyAccess = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="flex items-center justify-center p-8">
+    <div className="flex flex-col items-center justify-center p-8 min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <form
         action="https://api.web3forms.com/submit"
         method="POST"
@@ -63,11 +66,17 @@ const EarlyAccess = () => {
         </div>
         <button
           type="submit"
-          className="flex items-center justify-center w-full bg-primary text-white py-3 rounded-md hover:bg-secondary transition-colors"
+          className="flex items-center justify-center w-full bg-primary text-white py-3 rounded-md hover:bg-secondary transition-colors mb-4"
         >
           Submit <i className="fa-solid fa-arrow-right ml-2"></i>
         </button>
       </form>
+      <button 
+        onClick={() => navigate('/')}
+        className="text-primary hover:text-darkblue transition-colors mt-6"
+      >
+        ← Back to Home
+      </button>
     </div>
   );
 };

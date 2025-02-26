@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import { ArrowRight, Stethoscope } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -8,6 +9,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
   const animationRef = useRef(null);
   const circlesRef = useRef([]);
   const scrollTimerRef = useRef(null);
+  const navigate = useNavigate();
 
   // Optimized circle initialization
   useEffect(() => {
@@ -145,7 +147,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}>
               <button 
-                onClick={onGetAppClick}
+                onClick={() => navigate('/coming-soon')}
                 className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-lg
                   overflow-hidden transition-all duration-300 hover:shadow-lg
                   flex items-center gap-3 w-full sm:w-auto"
@@ -160,7 +162,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                   Starting your own practice?
                 </p>
                 <button 
-                  onClick={onJoinDoctorClick}
+                  onClick={() => navigate('/early-access')}
                   className="group relative overflow-hidden w-full sm:w-auto bg-white text-primary border border-primary px-6 py-3 rounded-lg
                     hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-md"
                 >

@@ -71,7 +71,7 @@ const AboutPage = () => {
               {teamMembers.map((member) => (
                 <div key={member.id} className="flex flex-col items-center group">
                   <div className="relative">
-                    <div className="w-40 h-40 rounded-full bg-[#EBF5FF] mb-6 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
+                    <div className="w-36 h-36 rounded-full bg-[#EBF5FF] mb-4 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
                       <img
                         src={member.imagePath}
                         alt={`${member.name}'s profile`}
@@ -87,8 +87,11 @@ const AboutPage = () => {
                       <Linkedin className="w-8 h-8 text-white" />
                     </a>
                   </div>
-                  <h3 className="text-[#5296B8] font-light text-3xl  mx-12 mb-2">{member.name}</h3>
-=                </div>
+                  <h3 className="text-[#5296B8] text-2xl font-bold mx-12 mb-1 transition-transform duration-300 group-hover:scale-105 drop-shadow-md">
+                    {member.name}
+                  </h3>
+                  <p className="text-black text-sm">{member.role}</p>
+                </div>
               ))}
             </div>
           </section>
