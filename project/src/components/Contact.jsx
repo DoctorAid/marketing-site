@@ -92,6 +92,15 @@ const Contact = () => {
                   placeholder="Your Message goes here"
                 />
               </div>
+
+              {/* Submit Button Added Here */}
+              <button
+                type="submit"
+                className="w-full bg-[#5296B8] text-white p-3 rounded-md hover:bg-[#417b9b] transition-colors"
+              >
+                Submit
+              </button>
+
             </form>
           </div>
         </div>
