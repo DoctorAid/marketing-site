@@ -122,13 +122,13 @@ const Practice = () => {
           </div>
           <div 
             ref={imageRef}
-            className="relative hidden lg:block h-[700px] will-change-transform"
+            className="relative hidden lg:block h-full h-[740px] top-20 right-20 w-[900px] p-100 will-change-transform p-0 "
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary-100/50 to-transparent rounded-[40px] blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary-100/50 to-transparent rounded-[40px] blur-3xl " />
             <div 
               className={`
                 absolute top-0 bottom-0 right-0 left-0 z-9
-                transition-transform duration-1000 ease-out
+                transition-transform duration-1000 ease-out 
                 ${isVisible ? 'translate-y-0' : 'translate-y-[100px]'}
               `}
             >
@@ -136,7 +136,7 @@ const Practice = () => {
                 src="/young-doctor-getting-ready-work.png"
                 alt="Doctor using digital tools" 
                 className={`
-                  relative w-full h-full object-cover object-center
+                  relative w-full h-full object-cover object-center 
                   transition-all duration-[1500ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]
                   will-change-transform  z-60
                   ${isVisible ? 
