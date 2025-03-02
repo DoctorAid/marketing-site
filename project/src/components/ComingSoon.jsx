@@ -19,9 +19,9 @@ const ComingSoon = () => {
       circlesRef.current = Array(5).fill().map(() => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        size: Math.min(width, height) * (0.1 + Math.random() * 0.2), // Responsive sizes
-        baseSpeedX: (Math.random() - 0.5) * 4,
-        baseSpeedY: (Math.random() - 0.5) * 4,
+        size: Math.min(width, height) * (0.05 + Math.random() * 0.15), // Smaller on mobile
+        baseSpeedX: (Math.random() - 0.5) * 2, // Reduced speed
+        baseSpeedY: (Math.random() - 0.5) * 2, // Reduced speed
         speedX: 0,
         speedY: 0,
         opacity: 0.1 + Math.random() * 0.15
@@ -123,21 +123,21 @@ const ComingSoon = () => {
       />
       
       {/* Content */}
-      <div className={`min-h-screen flex items-center justify-center relative z-10 transition-all duration-1000 ease-out ${
+      <div className={`min-h-screen flex items-center justify-center relative z-10 transition-all duration-1000 ease-out px-4 sm:px-6 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}>
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-[#5296B8] mb-4">Hang on Tight!</h1>
-          <p className="text-gray-600 mb-8">We are working hard to bring you something amazing.</p>
+        <div className="text-center max-w-md mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#5296B8] mb-4">Hang on Tight!</h1>
+          <p className="text-gray-600 mb-8 text-sm sm:text-base">We are working hard to bring you something amazing.</p>
           
           {/* Updated button to match "Get App" style */}
           <button 
             onClick={() => navigate('/')}
-            className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-6 py-3 rounded-lg
+            className="group relative bg-gradient-to-r from-primary to-blue-400 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg
               overflow-hidden transition-all duration-300 hover:shadow-lg
-              flex items-center gap-3 mx-auto"
+              flex items-center gap-2 sm:gap-3 mx-auto text-sm sm:text-base"
           >
-            <ArrowLeft className="w-5 h-5 transition-transform duration-500 group-hover:-translate-x-1 z-10" />
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 group-hover:-translate-x-1 z-10" />
             <span className="font-medium z-10">Back to Home</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
