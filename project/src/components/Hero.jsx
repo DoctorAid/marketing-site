@@ -162,7 +162,7 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                   Starting your own practice?
                 </p>
                 <button 
-                  onClick={() => navigate('/early-access')}
+                  onClick={() => navigate('https://doctor-aid.onrender.com/')}
                   className="group relative overflow-hidden w-full sm:w-auto bg-white text-primary border border-primary px-6 py-3 rounded-lg
                     hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-md"
                 >
