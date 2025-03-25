@@ -161,15 +161,18 @@ const Hero = ({ onGetAppClick, onJoinDoctorClick }) => {
                 <p className="text-darkblue text-sm sm:text-base">
                   Starting your own practice?
                 </p>
-                <button 
-                  onClick={() => navigate('https://doctor-aid.onrender.com/')}
-                  className="group relative overflow-hidden w-full sm:w-auto bg-white text-primary border border-primary px-6 py-3 rounded-lg
-                    hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-md"
-                >
-                  <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 z-10" />
-                  <span className="font-medium relative z-10">Join as a Doctor</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </button>
+                <a 
+  href="https://doctor-aid.onrender.com/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="group relative overflow-hidden w-full sm:w-auto bg-white text-primary border border-primary px-6 py-3 rounded-lg
+    hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-md"
+>
+  <Stethoscope className="w-4 h-4 transition-transform duration-500 group-hover:rotate-12 z-10" />
+  <span className="font-medium relative z-10">Join as a Doctor</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-primary to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+</a>
+
               </div>
             </div>
           </div>
